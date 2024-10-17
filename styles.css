@@ -1,0 +1,199 @@
+/* general styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: rgba(51, 51, 51, 0.5);
+    color: #fff;
+}
+
+header {
+    background-image: url('https://cdn.pixabay.com/photo/2020/05/26/18/55/race-5224312_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+}
+
+h1, h2 {
+    font-family: 'Anton', sans-serif;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    background-color: #fff;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1500px;
+}
+
+.nav-pills .nav-link {
+    background-color: #00000083;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px 0 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-pills .nav-link.active {
+    background-color: #d43100;
+    color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #8d8d8d7f;
+    color: #ffffff;
+}
+
+/* result item styles */
+.result-item {
+    width: 100%;
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* driver photo styles */
+.card-img-top {
+    width: 50%;
+    margin: 1rem auto 0;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.driver-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+    margin-top: 15px;
+}
+
+/* card styles */
+.card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    margin-bottom: 5px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-3, .col-md-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card-body {
+        text-align: left;
+    }
+}
+
+html {
+    word-wrap: break-word;
+}
+
+/* flexbox container for top drivers */
+#top-drivers {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#top-drivers .card {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+    #top-drivers {
+        flex-wrap: wrap;
+    }
+
+    #top-drivers .card {
+        flex: 0 0 100%;
+        margin: 10px 0;
+    }
+}
+
+/* driver page card styles */
+.driverdata-card {
+    background-color: #f2f2f2;
+    border: 2px solid #e0e0e0;
+    width: 100%;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.driverdata-card .card-body {
+    padding: 10px;
+}
+
+.driverdata-card .card-title {
+    font-size: 1rem;
+}
+
+.driverdata-card .card-text {
+    font-size: 0.8rem;
+}
