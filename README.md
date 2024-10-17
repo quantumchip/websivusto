@@ -1,5 +1,5 @@
 **Website link**
-https://github.com/quantumchip/websivusto.git
+https://quantumchip.github.io/websivusto/
 
 # HTML
 
