@@ -39,7 +39,7 @@ class F1App {
         Promise.all(fetchPromises)
             .then(results => {
                 const allDrivers = results.flat();
-                allDrivers.sort((a, b) => a.driver_number - b.driver_number); // Sort by driver number
+                allDrivers.sort((a, b) => a.driver_number - b.driver_number);
 
                 this.renderDriverCards(allDrivers);
 
@@ -51,7 +51,7 @@ class F1App {
 
     renderDriverCards(driverData) {
         const driverHTML = driverData.map(driver => {
-            const photoUrl = driver.headshot_url || 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png'; // Use default image if headshot_url is missing
+            const photoUrl = driver.headshot_url || 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png';
             const fullName = driver.full_name || 'Unknown Driver';
             const teamName = driver.team_name || 'Unknown Team';
             const driverNumber = driver.driver_number || 'N/A';
@@ -99,7 +99,7 @@ class F1App {
         this.fetchDrivers()
             .then(() => this.fetchRaceResults())
             .then(data => this.displayRaceResults(data))
-            .then(() => this.fetchTopDrivers()) // Ensure this is called last
+            .then(() => this.fetchTopDrivers())
             .catch(error => this.handleError(error, 'race results'));
     }
 
