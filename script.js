@@ -13,9 +13,8 @@ class F1App {
         document.addEventListener('DOMContentLoaded', () => {
             if (this.resultsDetails) {
                 this.fetchRecentRaceResults();
-                setInterval(() => {
                     this.fetchRecentRaceResults();
-                }, 60000); // 60000 ms = 1 minute
+                
             }
             if (this.driverDetails) {
                 this.fetchAllDriverData();
@@ -28,7 +27,7 @@ class F1App {
     }
 
     fetchAllDriverData() {
-        const driverNumbers = [1, 4, 16, 81, 55, 44, 63, 11, 14, 18, 27, 22, 23, 3, 10, 50, 20, 31, 43, 24, 2, 77];
+        const driverNumbers = [1, 4, 16, 81, 55, 44, 63, 11, 14, 18, 27, 22, 23, 3, 10, 50, 20, 31, 43, 24, 2, 77, 30];
         this.driverDetails.innerHTML = '';
 
         const fetchPromises = driverNumbers.map(driverNumber => 
